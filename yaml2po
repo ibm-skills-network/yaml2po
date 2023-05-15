@@ -104,7 +104,7 @@ end
 
 
 def generate_pot(engfilename, outfilename)
-    if File.exists? engfilename
+    if File.exist? engfilename
         engfile = YAML::load_file(engfilename)
         outfile = File.new(outfilename, "w")
         print_header('LANGUAGE', outfile)
@@ -117,8 +117,8 @@ end
 
 
 def lang2po(lang, engfilename, langfilename, outfilename)
-    if File.exists? engfilename
-        if File.exists? langfilename
+    if File.exist? engfilename
+        if File.exist? langfilename
             # Generate the PO file only once checked that both files exist
             engfile = YAML::load_file(engfilename)
             langfile = YAML::load_file(langfilename)

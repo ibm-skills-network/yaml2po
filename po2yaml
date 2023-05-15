@@ -68,7 +68,7 @@ end
 
 
 def generate_yaml(filename, outfilename, langcode)
-    if File.exists? filename
+    if File.exist? filename
         pofile = File.open(filename, "r")
         tr = {langcode => po2hash(pofile)}
         outfile = File.new(outfilename, "w")
